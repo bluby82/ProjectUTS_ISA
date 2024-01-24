@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{72CA83D2-05FF-4F76-8CAA-8E0A775606A6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ProjectUTS_ISA</RootNamespace>
+    <AssemblyName>ProjectUTS_ISA</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.31.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\SEMESTER 3\DATABASE\JualBeli_LIB\JualBeli_LIB\bin\Debug\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin.cs" />
+    <Compile Include="AES.cs" />
+    <Compile Include="CustomPrint.cs" />
+    <Compile Include="db.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>db.settings</DependentUpon>
+    </Compile>
+    <Compile Include="FormProfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProfil.Designer.cs">
+      <DependentUpon>FormProfil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTambahAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTambahAdmin.Designer.cs">
+      <DependentUpon>FormTambahAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTambahArtis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTambahArtis.Designer.cs">
+      <DependentUpon>FormTambahArtis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTambahJadwal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTambahJadwal.Designer.cs">
+      <DependentUpon>FormTambahJadwal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTambahManajer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTambahManajer.Designer.cs">
+      <DependentUpon>FormTambahManajer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTampilArtis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTampilArtis.Designer.cs">
+      <DependentUpon>FormTampilArtis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTampilArtisSaya.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTampilArtisSaya.Designer.cs">
+      <DependentUpon>FormTampilArtisSaya.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTampilJadwal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTampilJadwal.Designer.cs">
+      <DependentUpon>FormTampilJadwal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTampilJadwalArtisSaya.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTampilJadwalArtisSaya.Designer.cs">
+      <DependentUpon>FormTampilJadwalArtisSaya.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTampilJadwalSaya.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTampilJadwalSaya.Designer.cs">
+      <DependentUpon>FormTampilJadwalSaya.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTampilManajer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTampilManajer.Designer.cs">
+      <DependentUpon>FormTampilManajer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUbahJadwal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUbahJadwal.Designer.cs">
+      <DependentUpon>FormUbahJadwal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Jadwal.cs" />
+    <Compile Include="Koneksi.cs" />
+    <Compile Include="Manajer.cs" />
+    <Compile Include="FormUtama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUtama.Designer.cs">
+      <DependentUpon>FormUtama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Artis.cs" />
+    <Compile Include="Steganography.cs" />
+    <EmbeddedResource Include="FormProfil.resx">
+      <DependentUpon>FormProfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTambahAdmin.resx">
+      <DependentUpon>FormTambahAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTambahArtis.resx">
+      <DependentUpon>FormTambahArtis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTambahJadwal.resx">
+      <DependentUpon>FormTambahJadwal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTambahManajer.resx">
+      <DependentUpon>FormTambahManajer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTampilArtis.resx">
+      <DependentUpon>FormTampilArtis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTampilArtisSaya.resx">
+      <DependentUpon>FormTampilArtisSaya.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTampilJadwal.resx">
+      <DependentUpon>FormTampilJadwal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTampilJadwalArtisSaya.resx">
+      <DependentUpon>FormTampilJadwalArtisSaya.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTampilJadwalSaya.resx">
+      <DependentUpon>FormTampilJadwalSaya.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTampilManajer.resx">
+      <DependentUpon>FormTampilManajer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUbahJadwal.resx">
+      <DependentUpon>FormUbahJadwal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUtama.resx">
+      <DependentUpon>FormUtama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="db.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>db.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
